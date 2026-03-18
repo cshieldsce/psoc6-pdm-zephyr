@@ -1,0 +1,14 @@
+# Zephyr build output
+build/
+
+# West workspace metadata (not needed in standalone app repo)
+.west/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / OS
+.vscode/settings.json
+.DS_Store
+Thumbs.db

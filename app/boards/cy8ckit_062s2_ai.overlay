@@ -1,0 +1,14 @@
+/*
+ * psoc6-pdm-zephyr - Board overlay
+ * Copyright (c) 2026 Charlie Shields
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Enable HFCLK1 at 100 MHz (source: FLL) for AUDIOSS PDM peripheral.
+ */
+
+/* Enable HF1: source=fll0 (100MHz), div=/1 = 100MHz */
+&clk_hf1 {
+	status = "okay";
+	clock-div = <1>;
+	clocks = <&fll0>;
+};
