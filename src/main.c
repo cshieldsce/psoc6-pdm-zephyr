@@ -43,7 +43,7 @@ int main(void)
     /* Acoustic init */
     if (acoustic_init() != 0) {
         LOG_ERR("Acoustic init failed - check PDM clock/pinmux + board target");
-        while (1) {
+        for (;;) {
             gpio_pin_toggle_dt(&led);
             k_msleep(100);  /* fast blink = error */
         }
@@ -53,7 +53,7 @@ int main(void)
 
     uint32_t frame = 0;
 
-    while (1) {
+    for (;;) {
         if (acoustic_capture(audio_buf) == 0) {
             uint32_t energy = acoustic_energy(audio_buf,
                                               ACOUSTIC_FRAME_SAMPLES);

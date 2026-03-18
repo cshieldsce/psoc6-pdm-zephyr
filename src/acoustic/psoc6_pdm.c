@@ -39,21 +39,21 @@ LOG_MODULE_REGISTER(psoc6_pdm, LOG_LEVEL_DBG);
 static const cy_stc_pdm_pcm_config_t pdm_config = {
     .clkDiv             = CY_PDM_PCM_CLK_DIV_1_4,
     .mclkDiv            = CY_PDM_PCM_CLK_DIV_1_4,
-    .ckoDiv             = 3U,    /* /4: 6.25 MHz -> 1.5625 MHz bit-clock */
-    .sincDecRate        = 98U,   /* decimation rate -> ~15,954 Hz PCM */
+    .ckoDiv             = 3U,                        /* /4: 6.25 MHz -> 1.5625 MHz bit-clock */
+    .sincDecRate        = 98U,                       /* decimation rate -> ~15,954 Hz PCM */
     .chanSelect         = CY_PDM_PCM_OUT_CHAN_LEFT,  /* Mic 1 only */
     .chanSwapEnable     = false,
     .highPassDisable    = false,
-    .highPassFilterGain = 8U,    /* HPF pole at Fs/2^8 = ~62 Hz, removes DC */
+    .highPassFilterGain = 8U,                        /* HPF pole at Fs/2^8 = ~62 Hz, removes DC */
     .gainLeft           = CY_PDM_PCM_GAIN_4_5_DB,
-    .gainRight          = CY_PDM_PCM_GAIN_4_5_DB,   /* unused in mono */
+    .gainRight          = CY_PDM_PCM_GAIN_4_5_DB,    /* unused in mono */
     .softMuteEnable     = false,
     .softMuteFineGain   = 1U,
     .softMuteCycles     = CY_PDM_PCM_SOFT_MUTE_CYCLES_64,
-    .ckoDelay           = 3U,    /* sampler phase delay, 3 = default/no delay */
+    .ckoDelay           = 3U,                        /* sampler phase delay, 3 = default/no delay */
     .wordLen            = CY_PDM_PCM_WLEN_16_BIT,
     .signExtension      = true,
-    .rxFifoTriggerLevel = 32U,   /* polling mode, well below 254-word limit */
+    .rxFifoTriggerLevel = 32U,                       /* polling mode, well below 254-word limit */
     .dmaTriggerEnable   = false,
     .interruptMask      = 0U
 };
