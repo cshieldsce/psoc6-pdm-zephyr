@@ -22,7 +22,7 @@ west update
 ## Build & Flash
 
 ```bash
-west build -p always -b cy8ckit_062s2_ai/cy8c624abzi_s2d44 app
+west build -p always -b cy8ckit_062s2_ai/cy8c624abzi_s2d44 .
 west flash
 ```
 
