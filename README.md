@@ -39,12 +39,6 @@ PDM DIAG[0]: 0xXXXXXXXX  L=XXXX
 ...
 ```
 
-| `L=` values | Meaning |
-|---|---|
-| All `-1` | DATA line floating high — see [HARDWARE.md](HARDWARE.md) |
-| All `0` | DATA line floating low — see [HARDWARE.md](HARDWARE.md) |
-| **Mix of +/− values** | **Working correctly** |
-
 After that, each 100 ms frame logs min/max/avg and an energy value. Clap or blow on the board and the energy should spike by several orders of magnitude and drop back to the noise floor immediately after.
 
 ---
